@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Contact Global Direct Fence — Get a free quote for fence installation in Across USA.">
+    <meta property="og:title" content="Contact &amp; Free Quote — Global Direct Fence">
+    <meta property="og:description" content="Get a free quote for fence installation in Across USA.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.globaldirectfence.com/contact/">
+    <link rel="canonical" href="https://www.globaldirectfence.com/contact/">
     <title>Contact &amp; Free Quote — Global Direct Fence</title>
     <link rel="icon" type="image/png" href="../images/logo.png">
     <link rel="stylesheet" href="../css/styles.css">
@@ -96,7 +101,7 @@
                         <div class="contact-icon">&#128140;</div>
                         <div class="contact-detail-text">
                             <strong>Email</strong>
-                            <span><a href="mailto:globalschoolfence@gmail.com">globalschoolfence@gmail.com</a></span>
+                            <span><a href="mailto:info@globaldirectfence.com">info@globaldirectfence.com</a></span>
                         </div>
                     </div>
                     <div class="contact-detail">
@@ -128,9 +133,29 @@
                                 <span style="display:inline-flex;align-items:center;gap:.3rem;background:#f0f4ff;border:1px solid #d0d9f0;border-radius:6px;padding:.2rem .55rem;font-size:.82rem;font-weight:600;color:#333;">
                                     <i class="fas fa-money-bill-wave" style="color:#2e7d32;font-size:.85rem;"></i> Cash
                                 </span>
-                                <span style="display:inline-flex;align-items:center;gap:.3rem;background:#f0f4ff;border:1px solid #d0d9f0;border-radius:6px;padding:.2rem .55rem;font-size:.82rem;font-weight:600;color:#333;">
-                                    <i class="fab fa-paypal" style="color:#003087;font-size:.9rem;"></i> PayPal
+                                <span style="display:inline-flex;align-items:center;border-radius:6px;overflow:visible;position:relative;">
+                                    <a href="https://paypal.me/lckafleet" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.35rem;background:#009cde;border-radius:6px 0 0 6px;padding:.25rem .6rem;font-size:.82rem;font-weight:700;color:#fff;text-decoration:none;line-height:1.4;">
+                                        <i class="fab fa-paypal" style="font-size:.95rem;"></i> PayPal
+                                    </a>
+                                    <button id="pp-email-btn" onclick="togglePaypalEmail()" title="Show PayPal email" style="display:inline-flex;align-items:center;justify-content:center;background:#003087;border:none;border-radius:0 6px 6px 0;padding:.25rem .5rem;cursor:pointer;color:#fff;font-size:.78rem;line-height:1.4;">
+                                        <i class="fas fa-envelope"></i>
+                                    </button>
+                                    <div id="paypal-email-drop" style="display:none;position:absolute;top:calc(100% + 6px);left:0;background:#fff;border:1px solid #c8d8f0;border-radius:8px;padding:.4rem .85rem;font-size:.8rem;color:#003087;font-weight:600;white-space:nowrap;box-shadow:0 6px 20px rgba(0,0,80,.12);z-index:50;">
+                                        <i class="fab fa-paypal" style="margin-right:.3rem;opacity:.7;"></i>lcka.fleet@gmail.com
+                                    </div>
                                 </span>
+                                <script>
+                                function togglePaypalEmail() {
+                                    var drop = document.getElementById('paypal-email-drop');
+                                    var shown = drop.style.display !== 'none';
+                                    drop.style.display = shown ? 'none' : 'block';
+                                }
+                                document.addEventListener('click', function(e) {
+                                    if (!document.getElementById('pp-email-btn').contains(e.target)) {
+                                        document.getElementById('paypal-email-drop').style.display = 'none';
+                                    }
+                                });
+                                </script>
                                 <span style="display:inline-flex;align-items:center;gap:.3rem;background:#f0f4ff;border:1px solid #d0d9f0;border-radius:6px;padding:.2rem .55rem;font-size:.82rem;font-weight:600;color:#333;">
                                     <i class="fas fa-mobile-alt" style="color:#6c3cde;font-size:.85rem;"></i> Zelle
                                 </span>

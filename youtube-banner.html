@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Global School Fence — YouTube Banner</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #111;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 32px 24px 48px;
+      gap: 20px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .label {
+      color: #888;
+      font-size: 13px;
+      text-align: center;
+      line-height: 1.8;
+    }
+    .label strong { color: #eee; }
+
+    /* ─── PREVIEW SHELL ─── */
+    .preview-shell {
+      width: 960px;
+      height: 540px;
+      overflow: hidden;
+      border-radius: 6px;
+      box-shadow: 0 12px 60px rgba(0,0,0,0.9), 0 0 0 1px rgba(255,255,255,0.07);
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    /* ═══════════════════════════════════════════
+       BANNER  —  actual size 2560 × 1440 px
+       Scaled down 0.375× for preview (960 × 540)
+    ═══════════════════════════════════════════ */
+    .banner {
+      width: 2560px;
+      height: 1440px;
+      transform-origin: top left;
+      transform: scale(0.375);
+      position: relative;
+      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ── Photo background ── */
+    .bg-photo {
+      position: absolute;
+      inset: 0;
+      background: url('images/SchoolFencing.jpg') center center / cover no-repeat;
+      filter: brightness(0.45) saturate(0.7);
+    }
+
+    /* ── Multi-layer colour wash ── */
+    .bg-wash {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(105deg,
+          rgba(10,30,6,0.92) 0%,
+          rgba(10,30,6,0.72) 38%,
+          rgba(10,30,6,0.55) 60%,
+          rgba(10,30,6,0.82) 100%
+        );
+    }
+
+    /* ── Subtle vignette ── */
+    .vignette {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 120% 100% at 50% 50%,
+        transparent 40%, rgba(0,0,0,0.65) 100%);
+    }
+
+    /* ── Green glow behind logo ── */
+    .glow-center {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -52%);
+      width: 1100px;
+      height: 1100px;
+      background: radial-gradient(circle,
+        rgba(127,194,67,0.14) 0%,
+        transparent 65%);
+      pointer-events: none;
+    }
+
+    /* ── Decorative horizontal rule lines ── */
+    .rule-top {
+      position: absolute;
+      top: 180px;
+      left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(127,194,67,0.4) 20%,
+        rgba(127,194,67,0.7) 50%,
+        rgba(127,194,67,0.4) 80%,
+        transparent 100%);
+    }
+    .rule-bottom {
+      position: absolute;
+      bottom: 200px;
+      left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(127,194,67,0.4) 20%,
+        rgba(127,194,67,0.7) 50%,
+        rgba(127,194,67,0.4) 80%,
+        transparent 100%);
+    }
+
+    /* ── Left & right bold accent bars ── */
+    .bar-left {
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 22px;
+      background: linear-gradient(180deg, #7FC243 0%, #5a9e2f 100%);
+    }
+    .bar-right {
+      position: absolute;
+      right: 0; top: 0; bottom: 0;
+      width: 22px;
+      background: linear-gradient(180deg, #7FC243 0%, #5a9e2f 100%);
+    }
+    /* thin red inset */
+    .bar-left::after {
+      content: '';
+      position: absolute;
+      right: -10px; top: 0; bottom: 0;
+      width: 6px;
+      background: #c0392b;
+    }
+    .bar-right::before {
+      content: '';
+      position: absolute;
+      left: -10px; top: 0; bottom: 0;
+      width: 6px;
+      background: #c0392b;
+    }
+
+    /* ── Top ticker bar ── */
+    .top-bar {
+      position: absolute;
+      top: 0; left: 22px; right: 22px;
+      height: 100px;
+      background: rgba(0,0,0,0.55);
+      border-bottom: 2px solid rgba(127,194,67,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+    }
+    .top-bar-item {
+      font-family: 'Inter', sans-serif;
+      font-size: 26px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .top-bar-sep {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #7FC243;
+      flex-shrink: 0;
+    }
+
+    /* ── MAIN CONTENT ── */
+    .content {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 260px;
+      padding-top: 60px;   /* push below top bar */
+      padding-bottom: 130px; /* lift above bottom bar */
+      z-index: 10;
+    }
+
+    /* Logo + brand lockup */
+    .lockup {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 72px;
+      margin-bottom: 44px;
+    }
+
+    .logo-img {
+      width: 280px;
+      height: 280px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 40px rgba(127,194,67,0.5)) drop-shadow(0 8px 32px rgba(0,0,0,0.8));
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .brand-line1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 140px;
+      font-weight: 900;
+      line-height: 0.95;
+      letter-spacing: -3px;
+      color: #ffffff;
+      text-shadow: 0 4px 40px rgba(0,0,0,0.8);
+    }
+    .brand-line1 em {
+      font-style: normal;
+      color: #7FC243;
+    }
+
+    .brand-line2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 50px;
+      font-weight: 700;
+      letter-spacing: 12px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
+      padding-left: 6px;
+    }
+
+    .brand-line3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 30px;
+      font-weight: 500;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #7FC243;
+      padding-left: 6px;
+      margin-top: 4px;
+    }
+
+    /* Divider */
+    .h-divider {
+      width: 100%;
+      max-width: 1000px;
+      height: 3px;
+      background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(192,57,43,0.8) 20%,
+        #c0392b 50%,
+        rgba(192,57,43,0.8) 80%,
+        transparent 100%);
+      margin-bottom: 44px;
+      border-radius: 2px;
+    }
+
+    /* Services row */
+    .services {
+      display: flex;
+      gap: 0;
+      margin-bottom: 50px;
+    }
+    .service-tag {
+      font-family: 'Inter', sans-serif;
+      font-size: 30px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.78);
+      padding: 0 48px;
+      border-right: 2px solid rgba(127,194,67,0.35);
+      white-space: nowrap;
+    }
+    .service-tag:last-child { border-right: none; }
+    .service-tag.highlight { color: #7FC243; }
+
+    /* Stat pills */
+    .pills {
+      display: flex;
+      gap: 28px;
+    }
+    .pill {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 48px;
+      border-radius: 100px;
+      background: rgba(255,255,255,0.06);
+      border: 2px solid rgba(127,194,67,0.4);
+      backdrop-filter: blur(4px);
+    }
+    .pill-num {
+      font-family: 'Poppins', sans-serif;
+      font-size: 36px;
+      font-weight: 800;
+      color: #7FC243;
+      line-height: 1;
+    }
+    .pill-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.8);
+      white-space: nowrap;
+    }
+    .pill.cta {
+      background: #c0392b;
+      border-color: #c0392b;
+      box-shadow: 0 0 40px rgba(192,57,43,0.45);
+    }
+    .pill.cta .pill-num { color: #fff; }
+    .pill.cta .pill-label { color: rgba(255,255,255,0.9); }
+
+    /* ── Bottom bar ── */
+    .bottom-bar {
+      position: absolute;
+      bottom: 0; left: 22px; right: 22px;
+      height: 115px;
+      background: rgba(0,0,0,0.6);
+      border-top: 2px solid rgba(127,194,67,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 70px;
+      z-index: 20;
+    }
+    .bb-item {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-family: 'Inter', sans-serif;
+      font-size: 28px;
+      color: rgba(255,255,255,0.7);
+    }
+    .bb-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(127,194,67,0.2);
+      border: 2px solid rgba(127,194,67,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+      color: #7FC243;
+    }
+    .bb-item strong { color: #fff; font-weight: 600; }
+    .bb-sep {
+      width: 2px;
+      height: 48px;
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* Safe-zone guide (dashed, very faint) */
+    .safe-zone {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 1546px;
+      height: 423px;
+      border: 2px dashed rgba(255,255,255,0.06);
+      pointer-events: none;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="label">
+    <strong>YouTube Channel Banner — Preview (960 × 540)</strong><br>
+    Actual export size: 2560 × 1440 px &nbsp;·&nbsp; Safe zone (all devices): 1546 × 423 px
+  </div>
+
+  <div class="preview-shell">
+    <div class="banner">
+
+      <!-- Layers -->
+      <div class="bg-photo"></div>
+      <div class="bg-wash"></div>
+      <div class="vignette"></div>
+      <div class="glow-center"></div>
+
+      <!-- Accent bars -->
+      <div class="bar-left"></div>
+      <div class="bar-right"></div>
+
+      <!-- Rules -->
+      <div class="rule-top"></div>
+      <div class="rule-bottom"></div>
+
+      <!-- Top ticker -->
+      <div class="top-bar">
+        <div class="top-bar-item">Licensed &amp; Insured</div>
+        <div class="top-bar-sep"></div>
+        <div class="top-bar-item">Free Estimates</div>
+        <div class="top-bar-sep"></div>
+        <div class="top-bar-item">Serving Across the USA</div>
+        <div class="top-bar-sep"></div>
+        <div class="top-bar-item">10+ Years Experience</div>
+      </div>
+
+      <!-- Safe zone guide -->
+      <div class="safe-zone"></div>
+
+      <!-- Main content -->
+      <div class="content">
+
+        <div class="lockup">
+          <img class="logo-img" src="images/logo.png" alt="Global School Fence Logo">
+          <div class="brand-text">
+            <div class="brand-line1">Global <em>School</em></div>
+            <div class="brand-line2">Furniture &amp; Fence Supply</div>
+            <div class="brand-line3">Your Fencing Experts — Across the USA</div>
+          </div>
+        </div>
+
+        <div class="h-divider"></div>
+
+        <div class="services">
+          <div class="service-tag highlight">Vinyl</div>
+          <div class="service-tag">Aluminum</div>
+          <div class="service-tag highlight">School &amp; Campus</div>
+          <div class="service-tag">Childcare</div>
+          <div class="service-tag highlight">Commercial</div>
+        </div>
+
+        <div class="pills">
+          <div class="pill">
+            <span class="pill-num">150+</span>
+            <span class="pill-label">Projects Completed</span>
+          </div>
+          <div class="pill">
+            <span class="pill-num">5 ★</span>
+            <span class="pill-label">Average Rating</span>
+          </div>
+          <div class="pill">
+            <span class="pill-num">100%</span>
+            <span class="pill-label">Satisfaction Guaranteed</span>
+          </div>
+          <div class="pill cta">
+            <span class="pill-num">FREE</span>
+            <span class="pill-label">Estimates — No Obligation</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="bottom-bar">
+        <div class="bb-item">
+          <div class="bb-icon">📞</div>
+          <span><strong>(440) 771-3001</strong></span>
+        </div>
+        <div class="bb-sep"></div>
+        <div class="bb-item">
+          <div class="bb-icon">🕐</div>
+          <span>Mon–Fri 8am–6pm &nbsp;|&nbsp; Sat 9am–5pm</span>
+        </div>
+        <div class="bb-sep"></div>
+        <div class="bb-item">
+          <div class="bb-icon">🌐</div>
+          <span><strong>globaldirectfence.com</strong></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Action buttons -->
+  <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap;justify-content:center;">
+    <button onclick="openFullSize()" style="
+      background:#7FC243;color:#fff;border:none;border-radius:8px;
+      padding:14px 32px;font-family:'Inter',sans-serif;font-size:15px;
+      font-weight:700;cursor:pointer;letter-spacing:0.5px;
+      box-shadow:0 4px 20px rgba(127,194,67,0.4);
+    ">⬛ Open Full Size (2560×1440)</button>
+
+    <button onclick="showSteps()" style="
+      background:rgba(255,255,255,0.08);color:#ccc;border:1px solid rgba(255,255,255,0.15);
+      border-radius:8px;padding:14px 32px;font-family:'Inter',sans-serif;font-size:15px;
+      font-weight:600;cursor:pointer;letter-spacing:0.5px;
+    ">📋 How to Save as PNG</button>
+  </div>
+
+  <!-- Steps panel -->
+  <div id="steps-panel" style="display:none;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);
+    border-radius:12px;padding:28px 36px;max-width:620px;width:100%;">
+    <p style="color:#7FC243;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:16px;">
+      Mac — Easiest Method (Chrome)
+    </p>
+    <ol style="color:#ccc;font-size:14px;line-height:2.2;padding-left:20px;">
+      <li>Click <strong style="color:#fff;">"Open Full Size"</strong> above — a new tab opens at 2560×1440</li>
+      <li>Press <kbd style="background:#333;color:#fff;padding:2px 8px;border-radius:4px;font-size:12px;">⌘ Cmd + Shift + P</kbd> to open DevTools command palette</li>
+      <li>Type <strong style="color:#7FC243;">Capture full size screenshot</strong> → press Enter</li>
+      <li>The PNG downloads automatically to your <strong style="color:#fff;">Downloads</strong> folder</li>
+      <li>Upload to YouTube Studio → <strong style="color:#fff;">Customization → Branding → Banner image</strong></li>
+    </ol>
+    <p style="color:#666;font-size:12px;margin-top:16px;">
+      Alternative: In the full-size tab, press <kbd style="background:#333;color:#fff;padding:2px 6px;border-radius:3px;font-size:11px;">⌘ Shift 4</kbd> → drag to capture the banner area.
+    </p>
+  </div>
+
+  <div class="label" style="padding-bottom:12px;">
+    YouTube requires minimum <strong>2048 × 1152 px</strong> &nbsp;·&nbsp;
+    Safe zone (visible on all devices): <strong>1546 × 423 px</strong>
+  </div>
+
+  <script>
+    // If ?export=1 in URL, strip everything and show bare banner at true 2560×1440
+    (function () {
+      if (!window.location.search.includes('export=1')) return;
+      document.addEventListener('DOMContentLoaded', function () {
+        var banner = document.querySelector('.banner');
+        document.body.innerHTML = '';
+        document.documentElement.style.cssText = 'margin:0;padding:0;';
+        document.body.style.cssText = 'margin:0;padding:0;width:2560px;height:1440px;overflow:hidden;background:#000;';
+        banner.style.transform = 'none';
+        banner.style.position = 'fixed';
+        banner.style.inset = '0';
+        // hide safe-zone dashes in export
+        var sz = banner.querySelector('.safe-zone');
+        if (sz) sz.style.display = 'none';
+        document.body.appendChild(banner);
+      });
+    })();
+
+    function openFullSize() {
+      var url = window.location.href.split('?')[0] + '?export=1';
+      window.open(url, '_blank', 'width=2560,height=1440,scrollbars=no');
+    }
+
+    function showSteps() {
+      var panel = document.getElementById('steps-panel');
+      panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+
+</body>
+</html>
