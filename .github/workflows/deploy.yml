@@ -21,7 +21,8 @@ jobs:
             scriptUrl:   '${{ secrets.SCRIPT_URL }}',
             secretToken: '${{ secrets.SECRET_TOKEN }}',
             ytApiKey:    '${{ secrets.YT_API_KEY }}',
-            ytChannelId: '${{ secrets.YT_CHANNEL_ID }}'
+            ytChannelId: '${{ secrets.YT_CHANNEL_ID }}',
+            sendQuoteUrl: '${{ secrets.SEND_QUOTE_URL }}'
           };
           EOF
 
