@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read customer reviews and share your experience with Global Direct Fence — Across USA's trusted fence installation company.">
+    <title>Customer Reviews — Global Direct Fence</title>
+    <link rel="icon" type="image/png" href="../images/logo.png">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body data-base="../">
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar" id="announcementBar" style="display:none;">
+        <span class="ann-message"></span>
+        <button class="ann-close" id="annClose" aria-label="Close">&#10005;</button>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-left">
+                <span>Licensed &amp; Insured</span>
+                <span class="top-bar-divider">|</span>
+                <span>Free Estimates — No Obligation</span>
+                <span class="top-bar-divider">|</span>
+                <span>Serving Across USA</span>
+            </div>
+            <div class="top-bar-right">
+                <span>Mon–Fri 8am–6pm | Sat 9am–5pm</span>
+                <span class="top-bar-divider">|</span>
+                <span><a href="tel:+14407713001">(440) 771-3001</a></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Site Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="../">
+                    <img src="../images/logo.png" alt="Global School Furniture &amp; Fence Supply" class="logo-img">
+                </a>
+            </div>
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-menu">
+                    <li><a href="../" class="nav-link">Home</a></li>
+                    <li><a href="../products/" class="nav-link">Products</a></li>
+                    <li><a href="../gallery/" class="nav-link">Gallery</a></li>
+                    <li><a href="../about/" class="nav-link">About Us</a></li>
+                    <li><a href="../reviews/" class="nav-link active">Reviews</a></li>
+                    <li><a href="../contact/" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="tel:+14407713001" class="header-phone">(440) 771-3001</a>
+                <a href="../contact/#quote" class="btn btn-red">Book Free Estimate</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../">Home</a> &rsaquo; <span>Reviews</span>
+            </div>
+            <h1>Customer Reviews</h1>
+            <p>Honest experiences from homeowners, schools, and businesses we've served Across USA.</p>
+        </div>
+    </section>
+
+    <!-- Rating Summary -->
+    <section class="reviews-summary-section">
+        <div class="container">
+            <div class="reviews-summary-grid">
+
+                <!-- Overall Score -->
+                <div class="overall-score">
+                    <div class="score-number" id="avgScore">5</div>
+                    <div class="score-stars" id="avgStars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <div class="score-label">out of 5 &bull; <span id="totalCount">0</span> reviews</div>
+                </div>
+
+                <!-- Rating Bars -->
+                <div class="rating-bars" id="ratingBars">
+                    <!-- filled by JS -->
+                </div>
+
+                <!-- Write Review CTA -->
+                <div class="write-review-cta">
+                    <div class="wrc-icon">&#9998;</div>
+                    <h3>Share Your Experience</h3>
+                    <p>Purchased fencing from us? Let others know about your experience — good or bad, we read every review.</p>
+                    <a href="#writeReview" class="btn btn-red btn-lg">Write a Review</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews List -->
+    <section class="reviews-list-section">
+        <div class="container">
+            <div class="reviews-list-header">
+                <h2>All Reviews</h2>
+                <div class="reviews-sort">
+                    <label for="sortReviews">Sort by:</label>
+                    <select id="sortReviews">
+                        <option value="newest">Newest first</option>
+                        <option value="highest">Highest rating</option>
+                        <option value="lowest">Lowest rating</option>
+                    </select>
+                </div>
+            </div>
+            <div class="reviews-grid" id="reviewsGrid">
+                <!-- filled by JS -->
+            </div>
+            <div class="reviews-empty" id="reviewsEmpty" style="display:none;">
+                <div class="empty-icon">&#128172;</div>
+                <p>No reviews yet. Be the first to share your experience!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Write Review Form -->
+    <section class="write-review-section" id="writeReview">
+        <div class="container">
+            <div class="write-review-wrap">
+                <div class="section-header" style="text-align:left;margin-bottom:2rem;">
+                    <span class="label">Leave Feedback</span>
+                    <h2>Write a Review</h2>
+                    <p style="margin-left:0;">Your feedback helps us improve and helps others choose with confidence.</p>
+                </div>
+
+                <form class="review-form" id="reviewForm" novalidate>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="reviewerName">Your Name <span class="required">*</span></label>
+                            <input type="text" id="reviewerName" placeholder="e.g. Ruka S." required>
+                            <span class="field-error" id="nameError"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="reviewerLocation">City / Town <span class="optional">(optional)</span></label>
+                            <input type="text" id="reviewerLocation" placeholder="e.g. Fairview Park, OH">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fenceType">Fence Type Installed <span class="optional">(optional)</span></label>
+                        <select id="fenceType">
+                            <option value="">— Select fence type —</option>
+                            <option>Vinyl Fencing</option>
+                            <option>Aluminum Fencing</option>
+                            <option>Wood Fencing</option>
+                            <option>Chain Link Fencing</option>
+                            <option>Ornamental Iron</option>
+                            <option>School / Campus Fencing</option>
+                            <option>Commercial Fencing</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <!-- Star Rating -->
+                    <div class="form-group">
+                        <label>Your Rating <span class="required">*</span></label>
+                        <div class="star-rating-input" id="starRatingInput" role="group" aria-label="Star rating">
+                            <button type="button" class="star-btn" data-value="1" aria-label="1 star">&#9733;</button>
+                            <button type="button" class="star-btn" data-value="2" aria-label="2 stars">&#9733;</button>
+                            <button type="button" class="star-btn" data-value="3" aria-label="3 stars">&#9733;</button>
+                            <button type="button" class="star-btn" data-value="4" aria-label="4 stars">&#9733;</button>
+                            <button type="button" class="star-btn" data-value="5" aria-label="5 stars">&#9733;</button>
+                        </div>
+                        <div class="star-label" id="starLabel">Click a star to rate</div>
+                        <span class="field-error" id="ratingError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reviewTitle">Review Title <span class="optional">(optional)</span></label>
+                        <input type="text" id="reviewTitle" placeholder="e.g. Great experience from start to finish">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reviewText">Your Review <span class="required">*</span></label>
+                        <textarea id="reviewText" rows="5" placeholder="Tell us about your experience — the installation process, quality of materials, communication, and anything else that stood out." required></textarea>
+                        <span class="field-error" id="textError"></span>
+                        <div class="char-count"><span id="charCount">0</span> / 600</div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-red btn-lg">Submit Review</button>
+                        <p class="form-note">Reviews are displayed publicly on this page. Please keep feedback honest and respectful.</p>
+                    </div>
+
+                </form>
+
+                <!-- Success message -->
+                <div class="review-success" id="reviewSuccess" style="display:none;">
+                    <div class="success-icon">&#10003;</div>
+                    <h3>Thank you for your review!</h3>
+                    <p>Your feedback has been posted below.</p>
+                    <button class="btn btn-outline-blue" id="writeAnotherBtn">Write Another Review</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="cta-placeholder"></div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/config.js"></script>
+    <script src="../js/reviews.js"></script>
+</body>
+</html>

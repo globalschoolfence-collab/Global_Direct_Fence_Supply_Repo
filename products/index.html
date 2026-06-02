@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Global Direct Fence Products — Vinyl, aluminum, school campus, and commercial fencing installation in Across USA.">
+    <title>Products — Global Direct Fence</title>
+    <link rel="icon" type="image/png" href="../images/logo.png">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body data-base="../">
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar" id="announcementBar" style="display:none;">
+        <span class="ann-message"></span>
+        <button class="ann-close" id="annClose" aria-label="Close">&#10005;</button>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-left">
+                <span>Licensed &amp; Insured</span>
+                <span class="top-bar-divider">|</span>
+                <span>Free Estimates — No Obligation</span>
+                <span class="top-bar-divider">|</span>
+                <span>Serving Across USA</span>
+            </div>
+            <div class="top-bar-right">
+                <span>Mon–Fri 8am–6pm | Sat 9am–5pm</span>
+                <span class="top-bar-divider">|</span>
+                <span><a href="tel:+14407713001">(440) 771-3001</a></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Site Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="../">
+                    <img src="../images/logo.png" alt="Global School Furniture &amp; Fence Supply" class="logo-img">
+                </a>
+            </div>
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-menu">
+                    <li><a href="../" class="nav-link">Home</a></li>
+                    <li><a href="../products/" class="nav-link active">Products</a></li>
+                    <li><a href="../gallery/" class="nav-link">Gallery</a></li>
+                    <li><a href="../about/" class="nav-link">About Us</a></li>
+                    <li><a href="../reviews/" class="nav-link">Reviews</a></li>
+                    <li><a href="../contact/" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="tel:+14407713001" class="header-phone">(440) 771-3001</a>
+                <a href="../contact/#quote" class="btn btn-red">Book Free Estimate</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../">Home</a> &rsaquo; <span>Products</span>
+            </div>
+            <h1>Our Fencing Products</h1>
+            <p>Quality Fencing for every property type — residential, commercial, and school campuses.</p>
+        </div>
+    </section>
+
+    <!-- Services Detail -->
+    <section class="services-section" id="wood">
+        <div class="container">
+            <div class="section-header">
+                <span class="label">Browse By Type</span>
+                <h2>All Fence Types &amp; Materials</h2>
+                <p>Not sure which fence is right for you? <a href="../contact/" style="color:var(--blue-mid);font-weight:600;">Contact us</a> for a free consultation.</p>
+            </div>
+
+            <div class="service-detail-grid">
+
+                <div class="service-detail-card service-detail-card--expandable" id="vinyl">
+                    <div class="sdc-row">
+                        <div class="sdc-img"><img src="../images/VinylFence.jpg" alt="Vinyl Fencing"></div>
+                        <div class="sdc-body">
+                            <h3>Vinyl Fencing</h3>
+                            <p>Low-maintenance and long-lasting, vinyl fencing never needs painting or staining. Available in white, tan, gray, and more — in privacy, semi-privacy, and decorative styles.</p>
+                            <ul class="sdc-features">
+                                <li>Never needs painting or staining</li>
+                                <li>Resistant to rot, pests, and weather</li>
+                                <li>Lifetime warranty available</li>
+                            </ul>
+                            <a href="../contact/#quote" class="btn btn-red">Get a Quote</a>
+                        </div>
+                    </div>
+                    <div class="spec-toggle-wrap">
+                        <button class="spec-toggle-btn open" aria-expanded="true" aria-controls="vinyl-specs">
+                            <span><i class="fa-solid fa-file-lines"></i> Product Specifications</span>
+                            <i class="fa-solid fa-chevron-down spec-chevron"></i>
+                        </button>
+                        <div class="spec-panel open" id="vinyl-specs">
+                            <div class="spec-panel-inner">
+                                <p class="spec-panel-note">Detailed product specifications for our vinyl fencing system.</p>
+                                <div class="spec-images-grid spec-images-grid--single">
+                                    <div class="spec-img-wrap">
+                                        <img src="../images/VinylFenceSpecifications.png" alt="Vinyl fence specifications" class="spec-lightbox-trigger" tabindex="0">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-detail-card service-detail-card--expandable" id="aluminum">
+                    <div class="sdc-row">
+                        <div class="sdc-img"><img src="../images/SwimmingPoolHomeFence.png" alt="Aluminium Fencing"></div>
+                        <div class="sdc-body">
+                            <h3>Aluminum Fencing</h3>
+                            <p>Elegant and maintenance-free, aluminum fencing is perfect for pools, gardens, and decorative borders. Delivers the classic wrought-iron look without rust.</p>
+                            <ul class="sdc-features">
+                                <li>Rust-free and powder-coated finish</li>
+                                <li>Ideal for pool enclosures</li>
+                                <li>Multiple decorative styles and heights</li>
+                                <li>Lightweight yet extremely durable</li>
+                            </ul>
+                            <a href="../contact/#quote" class="btn btn-red">Get a Quote</a>
+                        </div>
+                    </div>
+                    <div class="spec-toggle-wrap">
+                        <button class="spec-toggle-btn open" aria-expanded="true" aria-controls="aluminum-specs">
+                            <span><i class="fa-solid fa-file-lines"></i> Product Specifications</span>
+                            <i class="fa-solid fa-chevron-down spec-chevron"></i>
+                        </button>
+                        <div class="spec-panel open" id="aluminum-specs">
+                            <div class="spec-panel-inner">
+                                <p class="spec-panel-note">Detailed product specifications for our aluminum school fencing system.</p>
+                                <div class="spec-images-grid">
+                                    <div class="spec-img-wrap">
+                                        <img src="../images/Aluminum_School_Fence_Page_1.png" alt="Aluminium school fence specifications page 1" class="spec-lightbox-trigger" tabindex="0">
+                                    </div>
+                                    <div class="spec-img-wrap">
+                                        <img src="../images/Aluminum_School_Fence_Page_2.png" alt="Aluminium school fence specifications page 2" class="spec-lightbox-trigger" tabindex="0">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-detail-card service-detail-card--expandable" id="school">
+                    <div class="sdc-row">
+                        <div class="sdc-img"><img src="../images/SchoolFencing.jpg" alt="School &amp; Campus Fencing"></div>
+                        <div class="sdc-body">
+                            <h3>School &amp; Campus Fencing</h3>
+                            <p>We specialize in school and institutional fencing — from full campus perimeters to playground enclosures and athletic field fencing. Safety-rated and code-compliant.</p>
+                            <ul class="sdc-features">
+                                <li>Campus perimeter security systems</li>
+                                <li>Playground and ball court enclosures</li>
+                            </ul>
+                            <a href="../contact/#quote" class="btn btn-red">Get a Quote</a>
+                        </div>
+                    </div>
+                    <div class="spec-toggle-wrap">
+                        <button class="spec-toggle-btn" aria-expanded="false" aria-controls="school-specs">
+                            <span><i class="fa-solid fa-file-lines"></i> Product Specifications</span>
+                            <i class="fa-solid fa-chevron-down spec-chevron"></i>
+                        </button>
+                        <div class="spec-panel" id="school-specs">
+                            <div class="spec-panel-inner">
+                                <p class="spec-panel-note">Detailed product specifications for our school &amp; campus fencing system.</p>
+                                <div class="spec-images-grid">
+                                    <div class="spec-img-wrap">
+                                        <img src="../images/Aluminum_School_Fence_Page_1.png" alt="School fence specifications page 1" class="spec-lightbox-trigger" tabindex="0">
+                                    </div>
+                                    <div class="spec-img-wrap">
+                                        <img src="../images/Aluminum_School_Fence_Page_2.png" alt="School fence specifications page 2" class="spec-lightbox-trigger" tabindex="0">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-detail-card service-detail-card--expandable" id="childcare">
+                    <div class="sdc-row">
+                        <div class="sdc-img"><img src="../images/DaycareFence.png" alt="Childcare &amp; Daycare Fencing"></div>
+                        <div class="sdc-body">
+                            <h3>Childcare &amp; Daycare Fencing</h3>
+                            <p>Purpose-built fencing for childcare centres and daycare facilities — keeping children safe with secure, compliant enclosures that meet all regulatory requirements.</p>
+                            <ul class="sdc-features">
+                                <li>Child-safe, rounded-top designs</li>
+                                <li>Secure latching gates and access controls</li>
+                                <li>Compliant with childcare safety regulations</li>
+                            </ul>
+                            <a href="../contact/#quote" class="btn btn-red">Get a Quote</a>
+                        </div>
+                    </div>
+                    <div class="spec-toggle-wrap">
+                        <button class="spec-toggle-btn" aria-expanded="false" aria-controls="childcare-specs">
+                            <span><i class="fa-solid fa-file-lines"></i> Product Specifications</span>
+                            <i class="fa-solid fa-chevron-down spec-chevron"></i>
+                        </button>
+                        <div class="spec-panel" id="childcare-specs">
+                            <div class="spec-panel-inner">
+                                <p class="spec-panel-note">Detailed product specifications for our childcare &amp; daycare fencing system.</p>
+                                <div class="spec-images-grid spec-images-grid--single">
+                                    <div class="spec-img-wrap">
+                                        <img src="../images/VinylFenceSpecifications.png" alt="Childcare fence specifications" class="spec-lightbox-trigger" tabindex="0">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-detail-card service-detail-card--expandable" id="commercial">
+                    <div class="sdc-row">
+                        <div class="sdc-img"><img src="../images/Commercial.png" alt="Commercial Fencing"></div>
+                        <div class="sdc-body">
+                            <h3>Commercial Fencing</h3>
+                            <p>Secure your business, warehouse, parking lot, or industrial site with heavy-duty commercial fencing. We handle projects of all sizes.</p>
+                            <ul class="sdc-features">
+                                <li>Industrial-grade materials and hardware</li>
+                                <li>Latched security gates for enhanced safety and controlled access</li>
+                                <li>Large-scale project management</li>
+                            </ul>
+                            <a href="../contact/#quote" class="btn btn-red">Get a Quote</a>
+                        </div>
+                    </div>
+                    <div class="spec-toggle-wrap">
+                        <button class="spec-toggle-btn" aria-expanded="false" aria-controls="commercial-specs">
+                            <span><i class="fa-solid fa-file-lines"></i> Product Specifications</span>
+                            <i class="fa-solid fa-chevron-down spec-chevron"></i>
+                        </button>
+                        <div class="spec-panel" id="commercial-specs">
+                            <div class="spec-panel-inner">
+                                <p class="spec-panel-note">Detailed product specifications for our commercial fencing system.</p>
+                                <div class="spec-images-grid">
+                                    <div class="spec-img-wrap">
+                                        <img src="../images/Aluminum_School_Fence_Page_1.png" alt="Commercial fence specifications page 1" class="spec-lightbox-trigger" tabindex="0">
+                                    </div>
+                                    <div class="spec-img-wrap">
+                                        <img src="../images/Aluminum_School_Fence_Page_2.png" alt="Commercial fence specifications page 2" class="spec-lightbox-trigger" tabindex="0">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section style="padding:4.5rem 0;background:var(--off-white);">
+        <div class="container">
+            <div class="section-header">
+                <span class="label">How It Works</span>
+                <h2>Our Simple 4-Step Process</h2>
+                <p>From first contact to final walkthrough — we guide you every step of the way.</p>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Free Consultation</h3>
+                    <p>Call, email, or fill out our form. We'll schedule a free on-site visit at your convenience.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Custom Quote</h3>
+                    <p>We measure your property and provide a detailed, itemized quote with no hidden fees.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Installation Guidance</h3>
+                    <p>We provide detailed installation specs, material guides, and permit documentation so your chosen installer has everything they need.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Final Walkthrough</h3>
+                    <p>We walk the completed fence with you to ensure 100% satisfaction before we leave.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="spec-lightbox" id="specLightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+        <button class="spec-lightbox-close" id="specLightboxClose" aria-label="Close">&times;</button>
+        <img class="spec-lightbox-img" id="specLightboxImg" src="" alt="">
+    </div>
+
+    <div id="cta-placeholder"></div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/config.js"></script>
+    <script src="../js/announcements.js"></script>
+    <script>
+        // Spec panel toggle
+        document.querySelectorAll('.spec-toggle-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var expanded = this.getAttribute('aria-expanded') === 'true';
+                var panel = document.getElementById(this.getAttribute('aria-controls'));
+                this.setAttribute('aria-expanded', !expanded);
+                this.classList.toggle('open', !expanded);
+                panel.classList.toggle('open', !expanded);
+            });
+        });
+
+        // Lightbox
+        var lightbox = document.getElementById('specLightbox');
+        var lightboxImg = document.getElementById('specLightboxImg');
+
+        function openLightbox(src, alt) {
+            lightboxImg.src = src;
+            lightboxImg.alt = alt;
+            lightbox.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        document.querySelectorAll('.spec-lightbox-trigger').forEach(function(img) {
+            img.addEventListener('click', function() { openLightbox(this.src, this.alt); });
+            img.addEventListener('keydown', function(e) { if (e.key === 'Enter' || e.key === ' ') openLightbox(this.src, this.alt); });
+        });
+
+        document.getElementById('specLightboxClose').addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', function(e) { if (e.target === lightbox) closeLightbox(); });
+        document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
+    </script>
+</body>
+</html>

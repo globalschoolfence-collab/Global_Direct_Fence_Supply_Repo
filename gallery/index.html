@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Global Direct Fence Project Gallery — Browse completed fence installations including wood, vinyl, aluminum, chain link, ornamental iron, school campuses, and commercial projects.">
+    <title>Gallery — Global Direct Fence</title>
+    <link rel="icon" type="image/png" href="../images/logo.png">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body data-base="../">
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar" id="announcementBar" style="display:none;">
+        <span class="ann-message"></span>
+        <button class="ann-close" id="annClose" aria-label="Close">&#10005;</button>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-bar-left">
+                <span>Licensed &amp; Insured</span>
+                <span class="top-bar-divider">|</span>
+                <span>Free Estimates — No Obligation</span>
+                <span class="top-bar-divider">|</span>
+                <span>Serving Across USA</span>
+            </div>
+            <div class="top-bar-right">
+                <span>Mon–Fri 8am–6pm | Sat 9am–5pm</span>
+                <span class="top-bar-divider">|</span>
+                <span><a href="tel:+14407713001">(440) 771-3001</a></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Site Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="../">
+                    <img src="../images/logo.png" alt="Global School Furniture &amp; Fence Supply" class="logo-img">
+                </a>
+            </div>
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-menu">
+                    <li><a href="../" class="nav-link">Home</a></li>
+                    <li><a href="../products/" class="nav-link">Products</a></li>
+                    <li><a href="../gallery/" class="nav-link active">Gallery</a></li>
+                    <li><a href="../about/" class="nav-link">About Us</a></li>
+                    <li><a href="../reviews/" class="nav-link">Reviews</a></li>
+                    <li><a href="../contact/" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="tel:+14407713001" class="header-phone">(440) 771-3001</a>
+                <a href="../contact/#quote" class="btn btn-red">Book Free Estimate</a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../">Home</a> &rsaquo; <span>Gallery</span>
+            </div>
+            <h1>Project Gallery</h1>
+            <p>Browse our portfolio of completed installations across Across USA.</p>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery-page">
+        <div class="container">
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="childcare">Childcare</button>
+                <button class="filter-btn" data-filter="school">School</button>
+                <button class="filter-btn" data-filter="vinyl">Vinyl</button>
+                <button class="filter-btn" data-filter="aluminum">Aluminum</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+                <button class="filter-btn" data-filter="videos" id="videosTabBtn">Videos</button>
+            </div>
+
+            <div class="gallery-pro-grid" id="galleryGrid">
+
+                <!-- Childcare -->
+                <div class="gallery-pro-item gallery-pro-wide" data-category="childcare">
+                    <img src="../images/DaycareFence.png" alt="Daycare fence installation">
+
+                    <div class="gallery-pro-overlay">
+                        <span class="gpo-tag">Childcare Fencing</span>
+                        <span class="gpo-title">Daycare Centre Fence</span>
+                    </div>
+                </div>
+
+                <div class="gallery-pro-item" data-category="childcare">
+                    <img src="../images/FenceChildcare.png" alt="Childcare fence installation">
+
+                    <div class="gallery-pro-overlay">
+                        <span class="gpo-tag">Childcare Fencing</span>
+                        <span class="gpo-title">Childcare Playground Enclosure</span>
+                    </div>
+                </div>
+
+                <!-- Aluminum -->
+                <div class="gallery-pro-item gallery-pro-wide" data-category="aluminum">
+                    <img src="../images/AluminiumFence.jpg" alt="Aluminium fence installation">
+
+                    <div class="gallery-pro-overlay">
+                        <span class="gpo-tag">Aluminium Fencing</span>
+                        <span class="gpo-title">Aluminium Fence Installation</span>
+                    </div>
+                </div>
+
+                <div class="gallery-pro-item" data-category="aluminum">
+                    <img src="../images/AluminiumGate.png" alt="Aluminium gate installation">
+
+                    <div class="gallery-pro-overlay">
+                        <span class="gpo-tag">Aluminium Fencing</span>
+                        <span class="gpo-title">Aluminium Entry Gate</span>
+                    </div>
+                </div>
+
+                <div class="gallery-pro-item" data-category="aluminum">
+                    <img src="../images/SwimmingPoolHomeFence.png" alt="Swimming pool home fence">
+
+                    <div class="gallery-pro-overlay">
+                        <span class="gpo-tag">Aluminium Fencing</span>
+                        <span class="gpo-title">Swimming Pool Home Fence</span>
+                    </div>
+                </div>
+
+                <!-- Vinyl -->
+                <div class="gallery-pro-item" data-category="vinyl">
+                    <img src="../images/VinylFence.jpg" alt="Vinyl fence installation">
+
+                    <div class="gallery-pro-overlay">
+                        <span class="gpo-tag">Vinyl Fencing</span>
+                        <span class="gpo-title">Vinyl Fence Installation</span>
+                    </div>
+                </div>
+
+                <div class="gallery-pro-item" data-category="vinyl">
+                    <img src="../images/VinylFence.png" alt="Vinyl fence close-up">
+
+                    <div class="gallery-pro-overlay">
+                        <span class="gpo-tag">Vinyl Fencing</span>
+                        <span class="gpo-title">Decorative Vinyl Fence</span>
+                    </div>
+                </div>
+
+                <div class="gallery-pro-item" data-category="vinyl">
+                    <img src="../images/VinylFence_1.png" alt="Vinyl fence style 1">
+
+                    <div class="gallery-pro-overlay">
+                        <span class="gpo-tag">Vinyl Fencing</span>
+                        <span class="gpo-title">White Vinyl Picket Fence</span>
+                    </div>
+                </div>
+
+                <div class="gallery-pro-item" data-category="vinyl">
+                    <img src="../images/SwimmingPool.png" alt="Swimming pool fence">
+
+                    <div class="gallery-pro-overlay">
+                        <span class="gpo-tag">Vinyl Fencing</span>
+                        <span class="gpo-title">Vinyl Fence — Swimming Frontage</span>
+                    </div>
+                </div>
+
+                <div class="gallery-pro-item" data-category="vinyl">
+                    <img src="../images/VinylFence_3.png" alt="Vinyl fence style 3">
+
+                    <div class="gallery-pro-overlay">
+                        <span class="gpo-tag">Vinyl Fencing</span>
+                        <span class="gpo-title">Vinyl Fence — Style 3</span>
+                    </div>
+                </div>
+
+                <!-- School -->
+                <div class="gallery-pro-item gallery-pro-wide" data-category="school">
+                    <img src="../images/SchoolFencing.jpg" alt="School campus fencing">
+
+                    <div class="gallery-pro-overlay">
+                        <span class="gpo-tag">School Fencing</span>
+                        <span class="gpo-title">School &amp; Campus Fencing</span>
+                    </div>
+                </div>
+
+                <div class="gallery-pro-item" data-category="school">
+                    <img src="../images/SchoolFencing.png" alt="School fence installation">
+
+                    <div class="gallery-pro-overlay">
+                        <span class="gpo-tag">School Fencing</span>
+                        <span class="gpo-title">Campus Perimeter Fence</span>
+                    </div>
+                </div>
+
+                <!-- Commercial -->
+                <div class="gallery-pro-item gallery-pro-wide" data-category="commercial">
+                    <img src="../images/GlobalSchoolFenceing.png" alt="Global School Furniture &amp; Supply store exterior">
+
+                    <div class="gallery-pro-overlay">
+                        <span class="gpo-tag">Commercial</span>
+                        <span class="gpo-title">Global School Supply — Store Exterior</span>
+                    </div>
+                </div>
+
+                <div class="gallery-pro-item" data-category="commercial">
+                    <img src="../images/Commercial.png" alt="Commercial fencing project">
+
+                    <div class="gallery-pro-overlay">
+                        <span class="gpo-tag">Commercial</span>
+                        <span class="gpo-title">Commercial Fencing Project</span>
+                    </div>
+                </div>
+
+                <div class="gallery-pro-item" data-category="commercial">
+                    <img src="../images/GlobalSchoolFenceCompany.png" alt="Global Direct Fence store signage">
+
+                    <div class="gallery-pro-overlay">
+                        <span class="gpo-tag">Commercial</span>
+                        <span class="gpo-title">Fencing &amp; Playground — Store Display</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- YouTube Videos (shown when Videos tab is active) -->
+            <div id="gallery-videos-section" style="display:none; margin-top:2rem;">
+                <div class="yt-grid" id="yt-gallery"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <div id="cta-placeholder"></div>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:9999;align-items:center;justify-content:center;flex-direction:column;">
+        <button id="lb-close" style="position:absolute;top:18px;right:22px;background:none;border:none;color:#fff;font-size:2.2rem;cursor:pointer;line-height:1;">&times;</button>
+        <button id="lb-prev" style="position:absolute;left:18px;background:rgba(255,255,255,0.15);border:none;color:#fff;font-size:2rem;cursor:pointer;padding:10px 16px;border-radius:50%;line-height:1;">&#8249;</button>
+        <button id="lb-next" style="position:absolute;right:18px;background:rgba(255,255,255,0.15);border:none;color:#fff;font-size:2rem;cursor:pointer;padding:10px 16px;border-radius:50%;line-height:1;">&#8250;</button>
+        <img id="lb-img" src="" alt="" style="max-width:90vw;max-height:85vh;object-fit:contain;border-radius:8px;box-shadow:0 8px 40px rgba(0,0,0,0.6);">
+        <p id="lb-caption" style="color:#ddd;margin-top:14px;font-size:.95rem;text-align:center;"></p>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/config.js"></script>
+    <script src="../js/announcements.js"></script>
+    <script src="../js/youtube.js"></script>
+    <script>
+        (function () {
+            /* ── Filter ── */
+            var btns         = document.querySelectorAll('.filter-btn');
+            var grid         = document.getElementById('galleryGrid');
+            var videoSection = document.getElementById('gallery-videos-section');
+            var ytLoaded     = false;
+
+            if (btns.length && grid) {
+                btns.forEach(function (btn) {
+                    btn.addEventListener('click', function () {
+                        btns.forEach(function (b) { b.classList.remove('active'); });
+                        btn.classList.add('active');
+                        var filter = btn.getAttribute('data-filter');
+
+                        if (filter === 'videos') {
+                            grid.style.display = 'none';
+                            videoSection.style.display = 'block';
+                            if (!ytLoaded) {
+                                ytLoaded = true;
+                                initYouTube('yt-gallery', 12);
+                            }
+                            return;
+                        }
+
+                        grid.style.display = '';
+                        videoSection.style.display = 'none';
+
+                        grid.querySelectorAll('.gallery-pro-item').forEach(function (item) {
+                            if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                                item.classList.remove('gallery-hidden');
+                            } else {
+                                item.classList.add('gallery-hidden');
+                            }
+                        });
+                    });
+                });
+            }
+
+            /* ── Lightbox ── */
+            var lb       = document.getElementById('lightbox');
+            var lbImg    = document.getElementById('lb-img');
+            var lbCap    = document.getElementById('lb-caption');
+            var lbClose  = document.getElementById('lb-close');
+            var lbPrev   = document.getElementById('lb-prev');
+            var lbNext   = document.getElementById('lb-next');
+            var items    = [];
+            var current  = 0;
+
+            function getVisibleItems() {
+                return Array.from(document.querySelectorAll('#galleryGrid .gallery-pro-item:not(.gallery-hidden)'));
+            }
+
+            function openLightbox(index) {
+                items = getVisibleItems();
+                current = index;
+                showImage();
+                lb.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+
+            function showImage() {
+                var item  = items[current];
+                var img   = item.querySelector('img');
+                var title = item.querySelector('.gpo-title');
+                lbImg.src = img.src;
+                lbImg.alt = img.alt;
+                lbCap.textContent = title ? title.textContent : '';
+                lbPrev.style.display = items.length > 1 ? '' : 'none';
+                lbNext.style.display = items.length > 1 ? '' : 'none';
+            }
+
+            function closeLightbox() {
+                lb.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+
+            document.querySelectorAll('#galleryGrid .gallery-pro-item').forEach(function (item, i) {
+                item.style.cursor = 'zoom-in';
+                item.addEventListener('click', function () {
+                    items = getVisibleItems();
+                    var idx = items.indexOf(item);
+                    openLightbox(idx >= 0 ? idx : 0);
+                });
+            });
+
+            lbClose.addEventListener('click', closeLightbox);
+            lb.addEventListener('click', function (e) { if (e.target === lb) closeLightbox(); });
+
+            lbPrev.addEventListener('click', function (e) {
+                e.stopPropagation();
+                current = (current - 1 + items.length) % items.length;
+                showImage();
+            });
+
+            lbNext.addEventListener('click', function (e) {
+                e.stopPropagation();
+                current = (current + 1) % items.length;
+                showImage();
+            });
+
+            document.addEventListener('keydown', function (e) {
+                if (lb.style.display !== 'flex') return;
+                if (e.key === 'Escape')      closeLightbox();
+                if (e.key === 'ArrowLeft')  { current = (current - 1 + items.length) % items.length; showImage(); }
+                if (e.key === 'ArrowRight') { current = (current + 1) % items.length; showImage(); }
+            });
+        })();
+    </script>
+</body>
+</html>
