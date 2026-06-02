@@ -357,7 +357,7 @@
     <script src="../js/announcements.js"></script>
     <script>
         const FUNCTION_URLS = {
-            'send-quote': 'PASTE_CLOUD_FUNCTION_URL_HERE'
+            'send-quote': window.APP_CONFIG?.sendQuoteUrl || ''
         };
 
         // Optional dimensions toggle
