@@ -25,6 +25,7 @@ jobs:
             sendQuoteUrl: '${{ secrets.SEND_QUOTE_URL }}'
           };
           EOF
+          sed -i '/js\/config\.js/d' .gitignore
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
