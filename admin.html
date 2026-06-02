@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin — Global Direct Fence</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="admin-body">
+
+  <!-- Login Screen -->
+  <div class="admin-login" id="adminLogin">
+    <div class="login-box">
+      <div class="login-logo">&#127968;</div>
+      <h1>Admin Panel</h1>
+      <p>Global Direct Fence</p>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="adminPass">Password</label>
+          <input type="password" id="adminPass" placeholder="Enter admin password" required>
+          <span class="field-error" id="loginError"></span>
+        </div>
+        <button type="submit" class="btn btn-red btn-lg" style="width:100%">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Admin Dashboard -->
+  <div class="admin-dashboard" id="adminDashboard" style="display:none;">
+
+    <!-- Admin Header -->
+    <header class="admin-header">
+      <div class="admin-header-inner">
+        <div class="admin-logo">GSF Admin</div>
+        <nav class="admin-nav">
+          <button class="admin-nav-btn active" data-tab="reviews">Reviews</button>
+          <button class="admin-nav-btn" data-tab="announcements">Announcements</button>
+        </nav>
+        <button class="btn btn-outline-blue" id="logoutBtn">Logout</button>
+      </div>
+    </header>
+
+    <!-- Stats Bar -->
+    <div class="admin-stats" id="adminStats">
+      <div class="admin-stat">
+        <div class="admin-stat-num" id="statTotal">—</div>
+        <div class="admin-stat-label">Total Reviews</div>
+      </div>
+      <div class="admin-stat">
+        <div class="admin-stat-num pending" id="statPending">—</div>
+        <div class="admin-stat-label">Pending</div>
+      </div>
+      <div class="admin-stat">
+        <div class="admin-stat-num approved" id="statApproved">—</div>
+        <div class="admin-stat-label">Approved</div>
+      </div>
+      <div class="admin-stat">
+        <div class="admin-stat-num" id="statAvg">—</div>
+        <div class="admin-stat-label">Avg Rating</div>
+      </div>
+    </div>
+
+    <!-- Reviews Tab -->
+    <div class="admin-tab-content" id="tab-reviews">
+      <div class="admin-toolbar">
+        <div class="admin-filter-btns">
+          <button class="filter-tab active" data-filter="pending">Pending <span id="pendingCount"></span></button>
+          <button class="filter-tab" data-filter="approved">Approved <span id="approvedCount"></span></button>
+          <button class="filter-tab" data-filter="all">All</button>
+        </div>
+        <div class="admin-search">
+          <input type="text" id="reviewSearch" placeholder="Search by name or keyword…">
+        </div>
+        <button class="btn btn-outline-blue" id="exportBtn">Export CSV</button>
+      </div>
+      <div class="admin-reviews-grid" id="adminReviewsGrid"></div>
+    </div>
+
+    <!-- Announcements Tab -->
+    <div class="admin-tab-content" id="tab-announcements" style="display:none;">
+      <div class="admin-toolbar">
+        <h3 style="font-family:'Poppins',sans-serif;color:var(--blue-dark);">Manage Announcements</h3>
+        <button class="btn btn-red" id="addAnnBtn">+ Add Announcement</button>
+      </div>
+
+      <!-- Add Announcement Form -->
+      <div class="ann-form-wrap" id="annFormWrap" style="display:none;">
+        <h4>New Announcement</h4>
+        <form id="annForm">
+          <div class="form-group">
+            <label>Message <span class="required">*</span></label>
+            <input type="text" id="annMessage" placeholder="e.g. Summer Special — 10% off vinyl fencing!" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Start Date</label>
+              <input type="date" id="annStart">
+            </div>
+            <div class="form-group">
+              <label>End Date</label>
+              <input type="date" id="annEnd">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Background Color</label>
+              <input type="color" id="annBg" value="#3a6b10">
+            </div>
+            <div class="form-group">
+              <label>Text Color</label>
+              <input type="color" id="annText" value="#ffffff">
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-red">Save Announcement</button>
+            <button type="button" class="btn btn-outline-blue" id="cancelAnnBtn">Cancel</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="ann-list" id="annList"></div>
+    </div>
+
+  </div>
+
+  <!-- Toast notification -->
+  <div class="admin-toast" id="adminToast"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
