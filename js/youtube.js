@@ -14,7 +14,7 @@ const YT_CHANNEL_ID = window.APP_CONFIG?.ytChannelId || 'UCLDSpvo-my7QOc-LAamay1
 
 // Manual video list — add more objects here as needed
 const MANUAL_VIDEOS = [
-    { id: 'RfspvrCtIjo', title: 'Global Direct Fence — Installation Overview' },
+    { id: 'lhxaYBn4e-U', title: 'Global Direct Fence - Childcare & Daycare Fencing' },
 ];
 
 /* ── Internal helpers ───────────────────────────────────── */
