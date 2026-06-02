@@ -1,7 +1,7 @@
 const nodemailer = require('nodemailer');
 const Busboy = require('busboy');
 
-const MAIL_TO   = process.env.MAIL_TO   || 'globalschoolfence@gmail.com';
+const MAIL_TO   = process.env.MAIL_TO   || 'info@globaldirectfence.com';
 const MAIL_FROM = process.env.MAIL_FROM || process.env.SMTP_USER;
 
 const FIELD_LABELS = {
