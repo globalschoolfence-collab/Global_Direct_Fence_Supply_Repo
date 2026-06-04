@@ -20,3 +20,5 @@ package-lock.json
 
 # Runtime config (contains secrets — copy from js/config.example.js)
 js/config.js
+
+images/Fence8_gallery.jpg
