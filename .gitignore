@@ -19,3 +19,5 @@ package-lock.json
 .env.local
 
 # Runtime config (contains secrets — copy from js/config.example.js)
+
+images/Fence8_gallery.jpg
